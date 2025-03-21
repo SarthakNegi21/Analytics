@@ -38,6 +38,7 @@ where rnk = 1;
 
 
 #find the sub-category which has highest growth by profit in 2023 compared to 2022
+  
 with cte as (Select sub_category,
 sum(case when year(order_date) = 2022 then profit else 0 end) as profit_2022,
 sum(case when year(order_date) = 2023 then profit else 0 end) as profit_2023
